@@ -27,12 +27,6 @@
 		<level value="error" />
 		<appender-ref ref="baseFile" />
 	</logger>
-
-	<!-- logger name="net.paoding.rose" additivity="false">
-		<level value="error" />
-		<appender-ref ref="baseFile" />
-	</logger> -->
-	<!-- end -->
 	
 	<!-- Stdout File -->
 	<appender name="stdoutFile" class="org.apache.log4j.DailyRollingFileAppender">
