@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>lbs-parent</artifactId>
+    <groupId>com.lanx.app.lbs</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <groupId>com.lanx.app.lbs</groupId>
+  <artifactId>lbs-poi</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>lbs-poi</name>
+  <description>用户添加lbs的ugc数据的模块</description>
+	<dependencies>
+  		<dependency>
+			<groupId>com.lanx.app.lbs</groupId>
+			<artifactId>lbs-core</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>			
+	</dependencies>
+</project>
