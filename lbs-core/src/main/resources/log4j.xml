@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<!-- Root -->
+	<appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%n%-5p:%m %n==> %l%n" />
+		</layout>
+	</appender>
+
+	<root>
+		<level value="info" />
+		<appender-ref ref="stdout" />
+	</root>
+	
+	<!-- modified at 2013-08-24 15:00 -->
+	<appender name="baseFile" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${catalina.base}/logs/base-out.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd-HH:mm:ss,SSS} %5p   - %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="com.lanx.base" additivity="false">
+		<level value="error" />
+		<appender-ref ref="baseFile" />
+	</logger>
+
+	<!-- logger name="net.paoding.rose" additivity="false">
+		<level value="error" />
+		<appender-ref ref="baseFile" />
+	</logger> -->
+	<!-- end -->
+	
+	<!-- Stdout File -->
+	<appender name="stdoutFile" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${catalina.base}/logs/lbs-core.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd-HH:mm:ss,SSS} %5p   - %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="com.lanx.app.lbs.core" additivity="false">
+		<level value="info" />
+		<appender-ref ref="stdoutFile" />
+	</logger>
+	<!-- end -->
+</log4j:configuration>
